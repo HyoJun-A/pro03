@@ -1,0 +1,41 @@
+package kr.go.paju.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.go.paju.dto.NoticeDTO;
+import kr.go.paju.model.NoticeDAO;
+
+@WebServlet("/GetModifyNoticeProCtrl.do")
+public class GetModifyNoticeProCtrl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		
+		int no = Integer.parseInt(request.getParameter("no"));
+		
+		NoticeDTO dto = new NoticeDTO();
+		dto.setTitle(title);
+		dto.setContent(content);
+		
+		NoticeDAO dao = new NoticeDAO();
+		int cnt = dao.modifyNotice(dto, no);
+		
+		if(cnt > 0 ){
+			response.sendRedirect("GetNoticeListCtrl.do");
+		} else{
+			response.sendRedirect("GetModifyNoticeCtrl.do?no="+no);
+		}
+	}
+
+}

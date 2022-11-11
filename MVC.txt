@@ -1,0 +1,23 @@
+o index
+WEB-INF에 index.jsp를 만들어서 사용 
+> 보안성, controller에서 index를 불러와 사용
+> url : http://localhost:8090/pro03/ 
+> pro03/ 뒤에 index.jsp가 없이 실행
+
+o web.xml
+기존의 코드를 주석처리 or 삭제 후 servlet으로 index가 실행될 수 있도록 구현
+> servlet, servlet-mapping 설정
+> servlet-name은 동일하도록 설정 
+> servlet > index.jsp순으로 작동
+
+o WEB-INF
+> view역활
+
+o DB - Maria
+> hedisql툴 사용
+> 이클립스를 낮은 버전을 사용하기 때문에 db연결을 maria DB로 연결하는 것이 아닌 mysql로 연결하여 사용 
+> DB연결은 모두 동일하게 작성하고 maria부분을 mysql로 변경하여 사용
+
+맵핑 : 서로 연결해 주는 것
+바인딩 : 데이터를 받는 것
+리졸브 : 화면과 주소가 다를 경우  
