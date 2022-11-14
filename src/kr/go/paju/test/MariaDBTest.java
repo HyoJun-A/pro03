@@ -15,7 +15,7 @@ import org.junit.Test;
 public class MariaDBTest {
     private final static Logger log = Logger.getGlobal();
     private final static String DRIVER = "org.mariadb.jdbc.Driver";
-    private final static String URL = "jdbc:mariadb://127.0.0.1:3308/govement?serverTimezone=Asia/Seoul";
+    private final static String URL = "jdbc:mariadb://127.0.0.1:3308/government?serverTimezone=Asia/Seoul";
     private final static String USER = "root";
     private final static String PW = "1234";
     

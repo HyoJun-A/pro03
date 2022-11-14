@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.util.*, java.lang.*" %>
+<%@ page import="java.text.*, java.net.InetAddress" %>
+<%
+	String id = (String) request.getAttribute("id");
+%>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
@@ -47,16 +54,30 @@
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+      <% if( id != null ) {%>
+      	<div class="navbar-item">
+	        <div class="buttons">
+				<p class="button is-primary"><strong><%= id %></strong></p>
+	            <a class="button is-primary" href="<%=request.getContextPath() %>/LogOutCtrl.do"><strong>로그아웃</strong></a>
+	            <a class="button is-light">마이페이지</a>
+	            <% if(id == "admin" ){ %>
+	            	<a class="button is-light">회원관리</a>
+	            	<a class="button is-light">공지사항관리</a>
+	            <% } %>
+	        </div>
+      	</div>
+      <% } else {%>
+   		<div class="navbar-item">
+	        <div class="buttons">
+	          <a class="button is-primary">
+	            <strong>Sign up</strong>
+	          </a>
+	          <a href="<%=request.getContextPath() %>/custom/login.jsp" class="button is-light">
+	            Login
+	          </a>
+	        </div>
         </div>
-      </div>
+      <% } %>
     </div>
   </div>
 </nav>

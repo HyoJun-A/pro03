@@ -13,8 +13,11 @@
 <c:set var="path1" value="${request.getContextPath() }"/>
 </head>
 <body>
+	
 	<jsp:include page="${path1 }/header.jsp"/>
 	<h2>${name}님의 테스트입니다.</h2>
+	<h2>${id}님 </h2>
+	<h2></h2>
 	<jsp:include page="${path1 }/footer.jsp"/>
 </body>
 </html>

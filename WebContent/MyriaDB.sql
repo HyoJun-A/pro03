@@ -1,4 +1,4 @@
-USE govement;
+USE government;
 -- DB 테스트
 CREATE TABLE test(NAME VARCHAR(50), POINT INT);
 SHOW TABLES;
@@ -6,7 +6,6 @@ SHOW TABLES;
 INSERT INTO test VALUES("김기태", 100);
 INSERT INTO test VALUES("안효준", 90);
 
-SELECT * FROM test;
 SELECT * FROM test;
 
 -- Notice
@@ -23,3 +22,21 @@ DESC notice;
 INSERT INTO notice(title, content) VALUES("테스트 제목1", "테스트 내용1");
 INSERT INTO notice(title, content) VALUES("테스트 제목2", "테스트 내용2");
 COMMIT;
+
+-- user
+CREATE TABLE USER(
+	id VARCHAR(16) PRIMARY KEY,
+	pw VARCHAR(100) NOT NULL,
+	NAME VARCHAR(50) NOT NULL,
+	email VARCHAR(100),
+	tel VARCHAR(13),
+	regdate DATETIME DEFAULT NOW()
+);
+
+DROP TABLE USER;
+ALTER TABLE USER ADD COLUMN address VARCHAR(100);
+DESC USER;
+COMMIT;
+DELETE FROM USER;
+INSERT INTO USER(id, pw, NAME, email, tel, address) VALUES("admin", "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4", "관리자", "admin@google.com", "010-0000-0000", "관리자동");
+SELECT * FROM USER;
