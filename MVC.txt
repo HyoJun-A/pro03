@@ -34,3 +34,20 @@ o url = 경로, type = 전송방식, ,dataType = 데이터 반환 방식
 
 o 포워드는 데이터를 보낼경우 데이터를 받을 수 없다 
 > 받기 위해서는 ajax를 사용해야 한다.
+
+function changeTourNo(){
+	var cate = document.frm1.cate.value;
+	if(cate == ""){
+		alert("분류를 선택하지 않으셨습니다.");
+		document.frm1.cate.focus();
+		return;
+	}
+	$.ajax({
+		url:"NoLoadCtrl.do"
+		type:"post"
+		dataType:"json"
+		success:functino(data){
+			$("#tourno").val(cate+data.no);
+		}
+	});
+}

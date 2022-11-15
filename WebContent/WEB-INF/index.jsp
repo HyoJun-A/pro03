@@ -8,16 +8,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>테스트</title>
+<title>메인페이지</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <c:set var="path1" value="${request.getContextPath() }"/>
+<jsp:include page="${path1 }/head.jsp"/>
 </head>
 <body>
 	
 	<jsp:include page="${path1 }/header.jsp"/>
 	<h2>${name}님의 테스트입니다.</h2>
-	<h2>${id}님 </h2>
 	<h2></h2>
+	
 	<jsp:include page="${path1 }/footer.jsp"/>
 </body>
 </html>

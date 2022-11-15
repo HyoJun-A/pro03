@@ -1,17 +1,19 @@
-package kr.go.paju.controller;
+package kr.go.paju.view;
 
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.go.paju.dto.UserDTO;
+import kr.go.paju.model.UserDAO;
 
-public class Main extends HttpServlet {
+@WebServlet("/GetUserDetailCtrl.do")
+public class GetUserDetailCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,15 +21,16 @@ public class Main extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		ServletContext application = request.getServletContext();
-		String realPath = request.getSession().getServletContext().getRealPath("/");
-		application.setAttribute("realPath", realPath);
+		String id = (String) request.getParameter("id");
 		
-		String name = "AhnHyoJun";
-		request.setAttribute("name", name);
+		UserDAO dao = new UserDAO();
+		UserDTO dto = dao.userInfo(id);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/index.jsp");
+		//dao로 부터 받은 데이터를 view에 디스패치함
+		request.setAttribute("dto", dto);
+		
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/userDetail.jsp");
 		view.forward(request, response);
+		
 	}
-
 }

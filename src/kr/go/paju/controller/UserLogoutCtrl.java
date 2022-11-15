@@ -9,14 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/LogOutCtrl.do")
-public class LogOutCtrl extends HttpServlet {
+@WebServlet("/UserLogoutCtrl.do")
+public class UserLogoutCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		session.invalidate();
-		response.sendRedirect("Main");
+		if(session!=null){
+			session.invalidate();
+		}
+		response.sendRedirect(request.getContextPath());
 	}
-
 }

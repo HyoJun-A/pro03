@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.util.*, java.lang.*" %>
+<%@ page import="java.text.*, java.net.InetAddress" %>
+<c:set var="path1" value="${request.getContextPath() }" />
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>회원 약관 동의</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>회원 약관 동의</title>
+    <jsp:include page="/head.jsp" />
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 .agree_fr { width: 900px; white-space:pre-wrap; margin: 10px auto; 
@@ -15,7 +19,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 </style>
 </head>
 <body>
-<%@ include file="../header.jsp" %>
+<jsp:include page="/header.jsp" />
 <div class="content container" id="content">
 	<h2 class="title">회원 약관 동의</h2>
 	<article class="agree_fr">
@@ -905,13 +909,9 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 		<input type="checkbox" id="ck_item2" name="ck_item2" class="form-check-input">
 		<label for="ck_item2" class="form-check-label">개인정보처리방침에 동의</label><br><br>
 	</div><br><hr><br>
-	<div class="form-check">
-		
-	</div>
-	<br><hr><br>	
 	<div class="btn-group">
-		<label for="ck_item3" onclick="protocol()" class="button is-primary"><strong>전체 약관에 동의</strong></label>
-		<button type="button" id="in_btn1" class="button is-primary">다음 단계</button>
+		<button type="button" id="ck_item3" onclick="protocol()" class="button is-info">전체 약관에 동의</button>
+		<button type="button" id="in_btn1" class="button is-info">다음 단계</button>
 	</div>
 	<script>
 	var ck_item1 = document.getElementById("ck_item1");
@@ -919,7 +919,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	var in_btn1 = document.getElementById("in_btn1");
 	in_btn1.addEventListener("click", function(){
 		if(ck_item1.checked && ck_item2.checked){
-			location.href = "insertCustom.jsp";
+			location.href = "signUp.jsp";
 		} else {
 			alert("약관 및 개인정보처리 방침에 동의하지 않으셨습니다.");
 			return;

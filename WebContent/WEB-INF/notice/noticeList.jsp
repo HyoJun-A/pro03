@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>공지사항 목록</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <jsp:include page="/head.jsp" />
   </head>
   <body>
   <jsp:include page="/header.jsp" />
@@ -44,9 +44,11 @@
 		    </c:if> --%>
 		  </tbody>
 		</table>
+		<c:if test='${sid.equals("admin") }'>
 		<div class="buttons">
 		  <a href="${path1 }/notice/addNotice.jsp" class="button is-success">글 등록</a>
 		</div>
+		</c:if>
     </div>
   </section>
   <jsp:include page="/footer.jsp"></jsp:include>

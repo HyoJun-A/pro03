@@ -1,0 +1,32 @@
+@charset "utf-8"
+
+.header {
+    border-bottom: 1px solid #EEE;
+}
+
+.hd {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 80px;
+}
+
+
+.item img {
+    clear: both;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.navbar-link {
+    width: 220px;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.nav2{
+    height: 50px;
+}

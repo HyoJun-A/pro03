@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>공지사항 상세보기</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <jsp:include page="/head.jsp" />
   </head>
   <body>
   <jsp:include page="/header.jsp" />
@@ -47,8 +47,10 @@
 		</table>
 		<div class="buttons">
 		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-info">목록</a>
+		  <c:if test='${sid.equals("admin") }'>
 		  <a href="${path1 }/GetModifyNoticeCtrl.do?no=${dto.no }" class="button is-info">수정</a>
 		  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-info">제거</a>
+		  </c:if>
 		</div>
     </div>
   </section>

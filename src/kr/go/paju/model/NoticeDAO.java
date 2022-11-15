@@ -141,4 +141,5 @@ public class NoticeDAO {
 		}
 		return cnt;
 	}
+	
 }
