@@ -32,7 +32,7 @@ public class UserDAO {
 		return cnt;
 	}
 	
-	//회원 가입
+	
 	public int addUser(UserDTO user){
 		int cnt = 0;
 		try {
@@ -69,7 +69,6 @@ public class UserDAO {
 		
 		try {
 			con = Maria.getConnection();
-			//읽은 횟수 증가
 			pstmt = con.prepareStatement(Maria.VISIT_UPDATE);
 			pstmt.setString(1, id);
 			pstmt.executeUpdate();
@@ -107,7 +106,6 @@ public class UserDAO {
 		UserDTO dto = new UserDTO();
 		try {
 			con = Maria.getConnection();
-			//읽은 횟수 증가
 			pstmt = con.prepareStatement(Maria.USER_ID_CHECK);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
@@ -141,9 +139,7 @@ public class UserDAO {
 		int cnt = 0;
 		try {
 			con = Maria.getConnection();
-			//읽은 횟수 증가
 			pstmt = con.prepareStatement(Maria.USER_UPDATE);
-			//id, pw, name, birth, email, tel, address
 			pstmt.setString(1, user.getPw());
 			pstmt.setString(2, user.getName());
 			pstmt.setString(3, user.getBirth());
@@ -169,7 +165,6 @@ public class UserDAO {
 	//회원목록
 	public ArrayList<UserDTO> getUserList() {
 		ArrayList<UserDTO> userList = new ArrayList<UserDTO>();
-		
 		try {
 			con = Maria.getConnection();
 			pstmt = con.prepareStatement(Maria.USER_ALL);

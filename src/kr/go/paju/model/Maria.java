@@ -25,6 +25,10 @@ public class Maria {
 	final static String USER_UPDATE = "update user set pw=?, name=?, birth=?, email=?, tel=?, addr=? where id=?";
 	final static String VISIT_UPDATE = "update user set visted=visted+1 where id=?";
 	
+	//test
+	public static String TEST_SELECT_ONE = "select * from test where name=?";
+	public static String TEST_SELECT_ALL = "select * from test";
+	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException{
 		Class.forName(DRIVER);
 		Connection con = DriverManager.getConnection(URL, USER, PW);

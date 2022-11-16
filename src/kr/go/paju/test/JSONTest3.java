@@ -1,34 +1,40 @@
-package kr.go.paju.view;
+package kr.go.paju.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.go.paju.dto.NoticeDTO;
-import kr.go.paju.model.NoticeDAO;
+import org.apache.commons.collections.map.HashedMap;
 
-@WebServlet("/GetNoticeListCtrl.do")
-public class GetNoticeListCtrl extends HttpServlet {
+import net.sf.json.JSONObject;
+
+
+@WebServlet("/JSONTest3.do")
+public class JSONTest3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
-		NoticeDAO dao = new NoticeDAO();
-		ArrayList<NoticeDTO> notiList = dao.getNoticeList();
+		ArrayList<TestDTO> testList = new ArrayList<TestDTO>();
 		
-		request.setAttribute("list", notiList);
+		TestDAO dao = new TestDAO();
+		testList = dao.testAll();
 		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeList.jsp");
-		view.forward(request, response);
+		JSONObject json = new JSONObject();
+		//json.put("name", result.getName());
+		json.put("testList", testList);
+		PrintWriter out = response.getWriter();
+		out.println(json.toString());
 	}
+
 }
