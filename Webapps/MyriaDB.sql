@@ -51,3 +51,25 @@ CREATE TABLE pic(
 );
 		
 
+CREATE TABLE pic(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),
+	picname VARCHAR(150),
+	pos INT DEFAULT 1
+);
+DROP TABLE pic;
+DESC pic;
+SELECT * FROM pic;
+DELETE FROM pic where tourno="G0010";
+COMMIT;
+CREATE TABLE tour(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),
+	cate VARCHAR(20),
+	place VARCHAR(100),
+	comment1 VARCHAR(1000),
+	comment2 VARCHAR(1000)  
+);
+DESC tour;
+SELECT * FROM tour;
+select a.no, a.tourno, a.cate, a.place, a.comment1, a.comment2, b.picname, b.pos from tour a inner join pic b on a.tourno=b.tourno where a.place LIKE '%이이%';

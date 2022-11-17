@@ -74,20 +74,34 @@
 	});
 	</script>
 	<hr>
-	<h2 class="title">JSON 데이터 받기3</h2>
+	<h2 class="title">JSON 리스트 객체 데이터 받기</h2>
 	<div id="con3">
 	
 	</div>
 	<script>
 	$(document).ready(function(){
 		$.ajax({
-			url:"${path1 }/JSONTest3.do",
-			type:"post",		
-			dataType:"json",	
+			url:"${path1 }/JSONTest3.do",	//아이디가 전송되어질 곳
+			type:"post",		//전송방식
+			enctype:"UTF-8",
+			dataType:"json",
+ 			processData:false,
+			contentType:false, 
+			cache:false,
 			success:function(data){
-				console.log(data);
-				var user = data;
-				$("#con3").html("이름 : " + user[0].name);
+				var trans = data;
+				console.log(trans.data);	
+				var tg = "";
+				$.each(trans, function(key, value){
+					if(key=="data"){
+						for(var i=0;i<value.length;i++){
+							console.log(value[i].name);
+							tg = tg + "<div>이름 : "+value[i].name+"</div>";
+							tg = tg + "<div>점수 : "+value[i].point+"</div>";
+						}
+					}
+				});
+				$("#con3").html(tg);
 			}
 		});
 	});

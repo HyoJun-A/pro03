@@ -11,6 +11,12 @@
                         <img src="${path2 }/img/logo.png" alt="Logo" >
                     </a>
                 </div>
+                <div class="search">
+                    <form name="frm2" class="frm2" id="frm2" action="${path2 }/GetSearchTour.do" method="post">
+                        <input class="input is-rounded" name="sea" id="sea" type="text" placeholder="통합검색">
+                        <a type="submit"><input type="image" src="${path2 }/img/sr.png" alt="Logo" class="simg"></a>
+                	</form>
+                </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <c:if test="${empty sid }">
@@ -41,107 +47,143 @@
                     </div>
                 </div>
             </nav>
-            <nav class="navbar nav2" role="navigation" aria-label="main navigation">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        	관광명소
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            	역사유적
-                        </a>
-                        <a class="navbar-item">
-                           	 문화예술
-                        </a>
-                        <a class="navbar-item">
-                            	휴양
-                        </a>
-                        <a class="navbar-item">
-                            	안보
-                        </a>
-                        <a class="navbar-item">
-                           	 체험
-                        </a>
-                        <a class="navbar-item">
-                            	레포츠
-                        </a>
-                        <a class="navbar-item">
-                            	자연명소
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        	전시공연공간
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-              	                     박물관
-                        </a>
-                        <a class="navbar-item">
-               	                     전시관
-                        </a>
-                        <a class="navbar-item">
-                	            공연/행사장
-                        </a>
-                        <a class="navbar-item">
-                 	           도서관
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        	음식
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                           	 한식
-                        </a>
-                        <a class="navbar-item">
-                          	  양식
-                        </a>
-                        <a class="navbar-item">
-                         	   일식/중식
-                        </a>
-                        <a class="navbar-item">
-                            	퓨전/기타
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                       	 수목원
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            	안내
-                        </a>
-                        <a class="navbar-item">
-                           	 예약
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        	관광안내
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                           	 종합안내
-                        </a>
-                        <a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
-                           	 공지사항
-                        </a>
-                        <a class="navbar-item">
-                            Q&A
-                        </a>
-                        <a class="navbar-item">
-                           	 새소식
-                        </a>
-                    </div>
-                </div>
-            </nav>
+			</div>
+		
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start" id="gnb">
+					<!-- ajax로 메뉴 로딩하여 추가하기 -->
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=A" class="navbar-link">
+							관광
+						</a>
+						<div class="navbar-dropdown cate" id="cate01">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=B" class="navbar-link cate">
+							체험
+						</a>
+						<div class="navbar-dropdown cate" id="cate02">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=C" class="navbar-link cate">
+							행사
+						</a>
+						<div class="navbar-dropdown cate" id="cate03">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=D" class="navbar-link cate">
+							축제
+						</a>
+						<div class="navbar-dropdown cate" id="cate04">
+		
+						</div>
+					</div>
+					<div href="${path2 }/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link cate">
+							숙박
+						</a>
+						<div class="navbar-dropdown cate" id="cate05">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=F" class="navbar-link cate">
+							음식
+						</a>
+						<div class="navbar-dropdown cate" id="cate06">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a href="${path2 }/GetTourCateListCtrl.do?cate=G" class="navbar-link cate">
+							쇼핑
+						</a>
+						<div class="navbar-dropdown cate" id="cate07">
+		
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable single">
+						<a class="navbar-link">
+							관광안내
+						</a>
+						<div class="navbar-dropdown single">
+							<a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
+								공지사항
+							</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable single">
+						<a class="navbar-link">
+							이야기파주
+						</a>
+		
+						<div class="navbar-dropdown single">
+							<a class="navbar-item">
+								1
+							</a>
+							<a class="navbar-item">
+								2
+							</a>
+							<a class="navbar-item">
+								파주이야기
+							</a>
+							<hr class="navbar-divider">
+							<a class="navbar-item">
+								Report an issue
+							</a>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+			</div>
+			</div>
+		</nav>
         </div>
     </header>
+    
+    <script>
+	$(document).ready(function(){
+		$.ajax({
+			url:"${path2 }/MemuLoadCtrl.do",
+			type:"POST",
+			enctype:"UTF-8",
+			datatype:"json",
+			processData:false,
+			contentType:false, 
+			cache:false,
+			success:function(data){
+				$(".navbar-dropdown.cate").empty();
+				var trans = $.parseJSON(data);
+				$.each(trans, function(key, value){
+					if(key=="data"){
+						for(var i=0;i<value.length;i++){
+							if(value[i].cate=="A"){
+								$("#cate01").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="B"){
+								$("#cate02").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="C"){
+								$("#cate03").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="D"){
+								$("#cate04").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="E"){
+								$("#cate05").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="F"){
+								$("#cate06").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							} else if(value[i].cate=="G"){
+								$("#cate07").append("<a href='${path2 }/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].place+"</a><br>");
+							}
+						}
+					}
+				});
+				
+			}
+		});
+	});
+	</script>

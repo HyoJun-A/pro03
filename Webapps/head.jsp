@@ -24,7 +24,7 @@ background-size:100% auto; background-repeat:no-repeat; }
 }
 
 .hd {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -40,14 +40,34 @@ background-size:100% auto; background-repeat:no-repeat; }
 }
 
 .navbar-link {
-    width: 220px;
-    margin-right: 8px;
+    width: 140px;
     font-weight: 600;
     font-size: 17px;
+    margin-left: 60px;
+    
 }
-
+.navbar-link:FIRST-CHILD{
+	
+}
 .nav2{
     height: 50px;
+}
+.search {
+	width: 700px;
+	margin: 0 auto;
+	float: right;
+	argin-left: 200px;
+	margin-top: 22px;
+	display: block;
+}
+
+.simg {
+	float: right;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: 5px;
+	width: 25px;
+	
 }
 </style>
 <script src="https://code.jquery.com/jquery-latest.js"></script>

@@ -41,31 +41,23 @@ public class TestDAO {
 		return dto;
 	}
 
-	public ArrayList<TestDTO> testAll() {
-		ArrayList<TestDTO> testList = new ArrayList<TestDTO>();
+	public ArrayList<TestDTO> testDataAll() {
+		ArrayList<TestDTO> list = new ArrayList<TestDTO>();
 		try {
 			con = Maria.getConnection();
 			pstmt = con.prepareStatement(Maria.TEST_SELECT_ALL);
 			rs = pstmt.executeQuery();
-			
 			while(rs.next()){
 				TestDTO dto = new TestDTO();
 				dto.setName(rs.getString("name"));
 				dto.setPoint(rs.getInt("point"));
-				testList.add(dto);
+				list.add(dto);
 			}
-			
-		} catch(ClassNotFoundException e){
-			System.out.println("드라이버 로딩 실패");
-			e.printStackTrace();
-		} catch(SQLException e){
-			System.out.println("SQL 구문이 처리되지 못했습니다.");
-			e.printStackTrace();
 		} catch(Exception e){
 			System.out.println("잘못된 연산 및 요청으로 인해 목록을 불러오지 못했습니다.");
 		} finally {
 			Maria.close(rs, pstmt, con);
 		}
-		return testList;
+		return list;
 	}
 }

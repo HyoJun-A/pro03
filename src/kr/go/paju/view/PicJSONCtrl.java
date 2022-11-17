@@ -1,4 +1,4 @@
-package kr.go.paju.test;
+package kr.go.paju.view;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,25 +11,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.*;
-//리스트 객체 정보 ajax로 보내기
-@WebServlet("/JSONTest3.do")
-public class JSONTest3 extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		
-		TestDAO dao = new TestDAO();
-		ArrayList<TestDTO> data = dao.testDataAll();
+import kr.go.paju.dto.PicDTO;
+import kr.go.paju.model.TourDAO;
+import net.sf.json.JSONObject;
 
-		PrintWriter out = response.getWriter();
-		HashMap<String,Object> map = new HashMap<String, Object>();
-		map.put("data", data);
+@WebServlet("/PicJSONCtrl.do")
+public class PicJSONCtrl extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String tourno = request.getParameter("tourno");
 		
+		PrintWriter out = response.getWriter();
+		TourDAO dao = new TourDAO();
+		ArrayList<PicDTO> picList = dao.JSONPicList(tourno);
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		map.put("picList", picList);
 		JSONObject json = new JSONObject();
 		json.putAll(map);
-		out.println(json.toString());
+		out.println(json);
 	}
 }
