@@ -76,7 +76,9 @@ select a.no, a.tourno, a.cate, a.place, a.comment1, a.comment2, b.picname, b.pos
 
 ALTER TABLE tour ADD COLUMN addr VARCHAR(200);
 DESC tour;
-SELECT * FROM tour;
+SELECT * FROM tour; B0013
+SELECT * FROM pic;
+UPDATE pid SET tourno = "B0013" WHERE picname="tong.jpg";
 SELECT COMMENT2 FROM tour;
 select * from tour where place like CONCAT('%','파주','%');
 update tour set addr="법원읍 자운서원로 204" WHERE tourno="A0002";
@@ -115,4 +117,6 @@ CREATE TABLE rpic(
 	picname VARCHAR(150)
 );
 
+
+UPDATE pic SET tourno = "B0013" WHERE picname="tong.jpg";
 COMMIT;

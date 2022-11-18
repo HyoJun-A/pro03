@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<link rel="stylesheet" href="./css/style2.css" />
 <style>
 .slider-text {
     position: absolute;
@@ -29,8 +30,8 @@
   }
 #slider{
     overflow: hidden;
-    max-width: 80%;
-    margin-left: 10%;
+    max-width: 1344px;
+    margin-left: 271px;
   } 
 @media screen and (max-width: 1023px) {
     #slider .card-content{
@@ -88,6 +89,7 @@
 	
 </head>
 <body>
+<div class="content">
   	<jsp:include page="${path1 }/header.jsp" />
 	<section class="test">
         <div id="slider">
@@ -97,12 +99,6 @@
                         <img src="/pro03/img/m1.jpg" alt="비쥬얼1" />
                     </figure>
                 </div>
-                <div class="card-content slider-text ">
-                    <p class="is-size-5 box">
-						임진각 관광지<br>
-						임진각 관광지 - 화해와 상생, 평화와 통일의 상징으로 전환시키기 위해 조성된 복합 문화공간
-                    </p>
-                </div>
             </div>
             <div class="card ">
                 <div class="card-image">
@@ -110,23 +106,11 @@
                         <img src="/pro03/img/m2.jpg" alt="" />
                     </figure>
                 </div>
-                <div class="card-content slider-text ">
-                    <p class="is-size-5 box">
-                    	황포돛배<br>
-						황포돛배 - 임진강의 숨겨진 비경과 일반인이 쉽게 접할 수 없는 곳을 관람할 수 있는 뱃기 관광
-                    </p>
-                </div>
             </div>
             <div class="card ">
                 <div class="card-image">
                     <p class="image is-16by9 is-covered" style="padding-top : 30.25%">
                         <img src="/pro03/img/m3.jpg" alt="" />
-                    </p>
-                </div>
-                <div class="card-content slider-text ">
-                    <p class=" is-size-5 box">
-                    	파주출판단지<br>
-                    	파주출판도시-책과 사람, 문화와 자연이 어우러진공간
                     </p>
                 </div>
             </div>
@@ -136,23 +120,11 @@
                         <img src="/pro03/img/m4.jpg" alt="" />
                     </p>
                 </div>
-                <div class="card-content slider-text ">
-                    <p class=" is-size-5 box">
-                   	         오두산통일전망대<br>
-					         오두산통일전망대 - 비무장지대 폭이 가장 짧은 곳! 통일 교육의 산도장
-                    </p>
-                </div>
             </div>
             <div class="card ">
                 <div class="card-image">
                     <p class="image is-16by9 is-covered" style="padding-top : 30.25%">
                         <img src="/pro03/img/m6.jpg" alt="" />
-                    </p>
-                </div>
-                <div class="card-content slider-text ">
-                    <p class=" is-size-5 box">
-                    	파주 이이 유적<br>
-					         파주 이이 유적 - 조선 중기의 대학자이며 경세가인 율곡 이이(栗谷 李珥, 1536～1584) 선생의 유적지     
                     </p>
                 </div>
             </div>
@@ -162,16 +134,139 @@
                         <img src="/pro03/img/m7.jpg" alt="" />
                     </p>
                 </div>
-                <div class="card-content slider-text ">
-                    <p class=" is-size-5 box">
-                    	마장호수 출렁다리<br>
-                    	물빛풍경이 아름다운 마장호수 위 220m 자연친화적 현수교
-                    </p>
-                </div>
             </div>
         </div>
     </section>
-    
+    <div class="middle-area">
+    <div class="container">
+      <div class="notice-wrap">
+        <section class="section section-notice">
+          <h3 class="title"><span>새소식</span></h3>
+          <ul class="notice-list">
+            
+              <li>
+                <a href="/tour/user/board/BD_board.view.do?bbsCd=2001&amp;seq=20221111143901942&amp;q_ctgCd=1003">임진각평화곤돌라와 함께하는 캠프그리브스 유료 시범투어 안내</a>
+                <span class="date">2022-11-11</span>
+              </li>
+            
+              <li>
+                <a href="/tour/user/board/BD_board.view.do?bbsCd=2001&amp;seq=20221025074508508&amp;q_ctgCd=1003">'제1회 파주평화페스티벌' 개최 안내</a>
+                <span class="date">2022-10-25</span>
+              </li>
+            
+          </ul>
+          <a href="/tour/user/board/BD_board.list.do?bbsCd=2001&amp;q_ctgCd=1003" class="btn btn-more">더보기</a>
+        </section>
+  
+        <section class="section section-guide">
+          <div class="main-tel">
+            <h3 class="title">파주 관광안내</h3>
+            <div class="tel-info">
+              <a href="tel:1330" class="tel">
+                <i class="ico ico-phone-yellow"></i>1330
+              </a>
+              <span class="text">(국번없이)</span>
+            </div>
+          </div>
+          <ul class="tel-list">
+            <li>
+              <a href="/user/tour/place/BD_tourPlaceInfoView.do?q_gubunCode=1004&amp;menuCode=1&amp;cntntsSn=2" class="title">임진각 관광안내</a>
+              <a href="tel:031-753-4744" class="tel">
+                <i class="ico ico-phone-black"></i>031)953-4744
+              </a>
+            </li>
+            <li class="pt-1 pb-1">
+              <a href="/user/tour/place/BD_tourPlaceInfoView.do?q_gubunCode=1004&amp;menuCode=1&amp;cntntsSn=374" class="title">DMZ 평화관광</a>
+              <div class="tel-info-br">
+              <a href="tel:031-954-0303" class="tel">
+                <i class="ico ico-phone-black"></i>031)954-0303
+              </a>
+              <a href="tel:031-950-1974" class="tel">
+                <i class="ico ico-phone-black"></i>031)950-1974
+              </a>
+              <a href="/user/tour/place/BD_tourPlaceInfoView.do?q_gubunCode=1004&amp;menuCode=1&amp;cntntsSn=374" class="text-secondary text-bold f13">※ 공지사항 바로가기</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+  
+      <section class="section section-keyword">
+        <h3 class="title"><span>Hot ! 키워드</span></h3>
+        <ul class="keyword-list">
+          <li><a href="/user/tour/place/BD_tourPlaceInfoList.do?q_gubunCode=1004&amp;menuCode=1"><span>안보테마 여행</span></a></li>
+          <li><a href="/user/tour/place/BD_tourPlaceInfoList.do?menuCode=4"><span>자연명소</span></a></li>
+          <li><a href="/user/tour/place/BD_tourPlaceInfoView.do?q_gubunCode=1003&amp;cntntsSn=52&amp;menuCode=78"><span>임진각 평화누리</span></a></li>
+          <li><a href="/tour/festival/festival02/festival02_2/festival02_2_01/festival02_2_01_01.jsp"><span>장단콩 축제</span></a></li>
+          <li><a href="/tour/festival/festival02/festival02_1/festival_02_1_tab1_1/festival_02_1_tab1_1_01.jsp"><span>인삼축제</span></a></li>
+          <li><a href="/user/tour/place/BD_tourPlaceInfoView.do?menuCode=111&amp;cntntsSn=2125"><span>율곡수목원</span></a></li>
+          <li><a href="/user/tour/place/BD_tourPlaceInfoList.do?menuCode=42"><span>캠핑장</span></a></li>
+          <li><a href="/tour/tourInfo/tourInfo03.jsp"><span>군장병할인</span></a></li>
+          <li><a href="/user/tour/place/BD_tourPlaceInfoList.do?q_gubunCode=1001&amp;menuCode=55"><span>국가지정 문화재</span></a></li>
+        </ul>
+      </section>
+  
+      <section class="section section-citytour">
+        <h3 class="title">가온누리 파주시티투어</h3>
+        <ul class="citytour-list">
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_31" target="_blank" title="시티투어코스 당일코스 주황(화) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-tue"><span>화</span></span>
+              <span class="theme">역사누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_32" target="_blank" title="시티투어코스 당일코스 노랑(수) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-wed"><span>수</span></span>
+              <span class="theme">통일누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_33" target="_blank" title="시티투어코스 당일코스 초록(목) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-thu"><span>목</span></span>
+              <span class="theme">평화누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_34" target="_blank" title="시티투어코스 당일코스 파랑(금) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-fri"><span>금</span></span>
+              <span class="theme">전통누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_35" target="_blank" title="시티투어코스 당일코스 남색(토) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-sat"><span>토</span></span>
+              <span class="theme">가족누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_36" target="_blank" title="시티투어코스 당일코스 보라(일) 새창">
+              <span class="period"><span>당일</span></span>
+              <span class="day day-sun"><span>일</span></span>
+              <span class="theme">오감누리</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.pjcitytour.kr/?p=8_37" target="_blank" title="시티투어코스 1박2일 레인보우2(토,일) 새창">
+              <span class="period"><span>1박2일</span></span>
+              <span class="day day-weekend"><span>주말</span></span>
+              <span class="theme">전통평화투어</span>
+            </a>
+          </li>
+        </ul>
+        <a href="http://www.pjcitytour.kr" class="btn btn-reserve" target="_blank" title="새창">
+          <i class="ico ico-reserve"></i>
+          <span>온라인 예약</span>
+        </a>
+      </section>
+    </div>
+  </div>
+</div>  
     <script>
 	    bulmaCarousel.attach('#slider', {
 	        slidesToScroll: 1,
