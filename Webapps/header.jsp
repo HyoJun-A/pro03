@@ -116,6 +116,12 @@
 							<a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
 								공지사항
 							</a>
+							<a class="navbar-item" href="<%=request.getContextPath() %>/GetReviewListCtrl.do">
+								이용 및 후기
+							</a>
+							<a class="navbar-item" href="<%=request.getContextPath() %>/GetNoticeListCtrl.do">
+								Q&A
+							</a>
 						</div>
 					</div>
 					<div class="navbar-item has-dropdown is-hoverable single">
@@ -125,17 +131,13 @@
 		
 						<div class="navbar-dropdown single">
 							<a class="navbar-item">
-								1
+								파주여행스토리
 							</a>
 							<a class="navbar-item">
-								2
+								인물이야기
 							</a>
 							<a class="navbar-item">
 								파주이야기
-							</a>
-							<hr class="navbar-divider">
-							<a class="navbar-item">
-								Report an issue
 							</a>
 						</div>
 					</div>
