@@ -85,4 +85,27 @@
 ![프로토타입](./file/prototype/18.png "프로토타입")
 ![프로토타입](./file/prototype/19.png "프로토타입")
 ![프로토타입](./file/prototype/19.png "프로토타입")
-![프로토타입](./file/prototype/20.mp4 "프로토타입")
+
+## 데이터베이스 구조도
+![데이터베이스](./file/db.png "데이터베이스")
+
+## 백엔드 구현 로직(MVC2)
+![MVC2](./file/db.png "MVC2")
+![데이터베이스](./file/mvc.PNG "데이터베이스")
+
+## 기능 구현 화면
+![화면구현](./file/view/1.png "화면구현")
+![화면구현](./file/view/2.png "화면구현")
+![화면구현](./file/view/3.png "화면구현")
+![화면구현](./file/view/4.png "화면구현")
+![화면구현](./file/view/5.png "화면구현")
+![화면구현](./file/view/6.png "화면구현")
+![화면구현](./file/view/7.png "화면구현")
+![화면구현](./file/view/8.png "화면구현")
+![화면구현](./file/view/9.png "화면구현")
+![화면구현](./file/view/10.png "화면구현")
+![화면구현](./file/view/11.png "화면구현")
+![화면구현](./file/view/12.png "화면구현")
+![화면구현](./file/view/13.png "화면구현")
+![화면구현](./file/view/14.png "화면구현")
+![화면구현](./file/view/15.png "화면구현")
