@@ -16,8 +16,9 @@
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-  <section class="section">
+  <section class="container hero is-halfheight">
     <div class="container">
+    <br><br>
       <h1 class="title">공지사항 수정</h1>
      <form action="${path1 }/GetModifyNoticeProCtrl.do?no=${dto.no }" method="post">
 		<table class="table">

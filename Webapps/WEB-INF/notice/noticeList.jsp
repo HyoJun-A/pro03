@@ -13,12 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>공지사항 목록</title>
     <jsp:include page="/head.jsp" />
+    <style>
+    	
+    </style>
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-  <section class="section">
-    <div class="container">
-      <h1 class="title">공지사항 목록</h1>
+  <section class="container hero is-halfheight">
+    <div class="container"><br>
+      <h1 class="title">공지사항 목록</h1><br>
 		<table class="table">
 		  <thead>
 		    <tr>

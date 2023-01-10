@@ -15,7 +15,7 @@
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-	<section class="section">
+	<section class="container hero is-halfheight">
 	    <div class="columns is-full">
 			<jsp:include page="../../admin/sidebar.jsp" />
 			<div class="column is-10">

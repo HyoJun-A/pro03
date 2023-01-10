@@ -5,7 +5,7 @@
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <c:set var="path0" value="<%=request.getContextPath() %>" />
-<footer class="footer">
+<footer class="is-flex-align-items-flex-end mt-auto">
     <div class="content has-text-centered">
       <img src="${path0 }/img/flogo.png" alt="flogo" class="flogo">
       <p>

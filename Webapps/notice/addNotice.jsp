@@ -16,8 +16,8 @@
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-  <section class="section">
-    <div class="container">
+  <section class="container hero is-halfheight">
+    <div class="container"><br><br>
       <h1 class="title">글 등록하기</h1>
       	<form action="${path1 }/AddNoticeCtrl.do" method="post">
 			<table class="table">

@@ -16,8 +16,8 @@
   </head>
   <body>
   <jsp:include page="/header.jsp" />
-  <section class="section">
-    <div class="container">
+  <section class="container hero is-halfheight">
+    <div class="container"><br><br>
       <h1 class="title">이용 및 후기 목록</h1>
 		<table class="table">
 		  <thead>
