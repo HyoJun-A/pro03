@@ -1,5 +1,8 @@
 # 파주문화관광 홈페이지
 
+## Front 화면
+*https://hyojun-a.github.io/web03/
+
 ## 프로젝트 개요 
 "파주문화관광"이라는 실제 홈페이지를 주제로 프론트엔드 부분을 프로토타입, 스토리보드, 메뉴구조도를 활용하여 계획을 하고, HTML, CSS, JAVASCRIPT, JQUERY, Bulma framework를 사용해 구현
 , 백엔드 부분은 MVC_Level2의 구조를 사용하여 구현, 데이터베이스는 Maria DB를 활용, 구현된 기능으로는 회원 가입, 회원 목록, 회원 상세보기, 로그인, 로그아웃, 회원 아이디 중복확인,
@@ -41,9 +44,6 @@
 
 ## 데이터베이스 구조도(ERD)
 ![데이터베이스](./file/db.png "데이터베이스")
-
-## Front 화면
-*https://hyojun-a.github.io/web03/
 
 ## 프로젝트 설계
 ### 메뉴 구조도
