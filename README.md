@@ -36,6 +36,12 @@
 * 예외처리
 * Git 버전관리
 
+## 백엔드 구현 로직(MVC2)
+![데이터베이스](./file/mvc.PNG "데이터베이스")
+
+## 데이터베이스 구조도(ERD)
+![데이터베이스](./file/db.png "데이터베이스")
+
 ## Front 화면
 *https://hyojun-a.github.io/web03/
 
@@ -88,12 +94,6 @@
 ![프로토타입](./file/prototype/18.png "프로토타입")
 ![프로토타입](./file/prototype/19.png "프로토타입")
 ![프로토타입](./file/prototype/19.png "프로토타입")
-
-## 데이터베이스 구조도(ERD)
-![데이터베이스](./file/db.png "데이터베이스")
-
-## 백엔드 구현 로직(MVC2)
-![데이터베이스](./file/mvc.PNG "데이터베이스")
 
 ## 기능 구현 화면
 ![화면구현](./file/view/1.png "화면구현")
