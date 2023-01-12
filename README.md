@@ -42,16 +42,18 @@
 ## 프로젝트 설계
 
 ### 백엔드 구현 로직(MVC2)
-![데이터베이스](./file/mvc.PNG "데이터베이스")
+![mvc](./file/mvc.PNG "mvc")
 
 ### 데이터베이스 구조도(ERD)
 ![데이터베이스](./file/db.png "데이터베이스")
 
 ### 메뉴 구조도
 ![메뉴구조도](./file/menu/s1.PNG "메뉴구조도")
+
 ### UI프로세스
 ![UI프로세스](./file/uiprocess/s1.PNG "UI프로세스")
 ![UI프로세스](./file/uiprocess/s2.PNG "UI프로세스")
+
 ### 스토리보드
 ![스토리보드](./file/story/1.PNG "스토리보드")
 ![스토리보드](./file/story/2.PNG "스토리보드")
